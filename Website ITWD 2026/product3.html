@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BayView Realty - Waterfront Villa</title>
+
+    <link rel="stylesheet"
+          href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="header-top">
+
+            <div class="header-left"
+                 onclick="location.href='index.html'"
+                 style="cursor:pointer;">
+
+                <img src="images/logo.png"
+                     class="logo-img"
+                     alt="BayView Realty Logo">
+
+            </div>
+
+            <div class="header-center">
+
+                <h1 class="logo"
+                    onclick="location.href='index.html'"
+                    style="cursor:pointer;">
+
+                    BayView Realty
+
+                </h1>
+
+            </div>
+
+            <div class="header-right">
+
+                <button id="openSettings"
+                        class="settings-btn">
+
+                    ⚙️ Settings
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="header-bottom">
+
+            <nav>
+
+                <a href="index.html"
+                   class="nav-btn">
+                    Home
+                </a>
+
+                <a href="about.html"
+                   class="nav-btn">
+                    About
+                </a>
+
+                <a href="agents.html"
+                   class="nav-btn">
+                    Agents
+                </a>
+
+                <a href="contact.html"
+                   class="nav-btn">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Settings Popup -->
+
+    <div id="settingsPopup"
+         class="settings-popup">
+
+        <div class="settings-content">
+
+            <h2>Text Settings</h2>
+
+            <label>Text Size:</label>
+
+            <select id="textSize">
+                <option value="16px">Small</option>
+                <option value="18px" selected>Medium</option>
+                <option value="22px">Large</option>
+                <option value="26px">Extra Large</option>
+            </select>
+
+            <label>Text Colour:</label>
+
+            <select id="textColor">
+                <option value="#000">Black</option>
+                <option value="#333">Dark Grey</option>
+                <option value="#0077cc">Blue</option>
+                <option value="#cc0000">Red</option>
+            </select>
+
+            <button id="darkModeToggle"
+                    class="tts-btn">
+                Enable Dark Mode
+            </button>
+
+            <label>Text-To-Speech:</label>
+
+            <button id="ttsToggle"
+                    class="tts-btn">
+                Enable TTS
+            </button>
+
+            <button id="closeSettings"
+                    class="close-settings">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Under Construction Popup -->
+
+    <div id="ucPopup"
+         class="uc-popup">
+
+        <div class="uc-content">
+
+            <img src="images/Warning.png"
+                 class="uc-img"
+                 alt="Warning">
+
+            <h2>Under Construction</h2>
+
+            <p>
+                This feature is currently unavailable.
+            </p>
+
+            <button id="ucClose"
+                    class="uc-close">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Property Information -->
+
+    <main class="product-page">
+
+        <div class="hero-image">
+
+            <div class="image-placeholder">
+
+                Future Property Image
+
+            </div>
+
+        </div>
+
+        <section class="product-details">
+
+            <h2>Waterfront Villa</h2>
+
+            <p class="price">
+                $1,150,000
+            </p>
+
+            <p class="description">
+
+                A premium waterfront villa offering breathtaking
+                coastal views, luxurious finishes, and spacious
+                living areas. Ideal for families seeking an
+                exclusive lifestyle property in a highly desirable
+                location.
+
+            </p>
+
+            <ul class="features">
+
+                <li>4 Bedrooms</li>
+
+                <li>3 Bathrooms</li>
+
+                <li>Waterfront Views</li>
+
+                <li>Double Garage</li>
+
+                <li>Designer Kitchen</li>
+
+                <li>Large Outdoor Entertainment Area</li>
+
+            </ul>
+
+        </section>
+
+        <div class="map-placeholder">
+
+            <div class="map-pin">
+                📍
+            </div>
+
+            <p>
+                12 Coastal View Drive, Hawke's Bay
+            </p>
+
+        </div>
+        <section class="agent-section">
+
+            <h3>Contact Agent</h3>
+
+            <div class="agent-info">
+
+                <div class="agent-photo">
+
+                    Agent Photo
+
+                </div>
+
+                <div class="agent-text">
+
+                    <p>
+                        <strong>Name:</strong>
+                        Sarah Thompson
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        sarah@bayviewrealty.co.nz
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        0800-BAYVIEW
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button class="contact-btn">
+
+                Send Inquiry
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Chat Widget -->
+
+    <button id="chatBubble"
+            class="chat-bubble">
+
+        💬
+
+    </button>
+
+    <div id="chatBox"
+         class="chat-box">
+
+        <div class="chat-header">
+
+            <span>
+                Chat With Us
+            </span>
+
+            <button id="closeChat">
+                X
+            </button>
+
+        </div>
+
+        <div class="chat-content">
+
+            <div id="chatMessages">
+
+                <p class="bot-msg">
+                    Hello! How can we help you today?
+                </p>
+
+            </div>
+
+            <button class="chat-option"
+                    data-reply="property">
+
+                Tell me about this property
+
+            </button>
+
+            <button class="chat-option"
+                    data-reply="contact">
+
+                How do I contact the agent?
+
+            </button>
+
+            <button class="chat-option"
+                    data-reply="hours">
+
+                What are your business hours?
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
+
+        <a href="terms.html">
+            Terms & Conditions
+        </a>
+
+    </footer>
+
+    <!-- References -->
+
+    <button id="refButton"
+            class="ref-btn">
+
+        References
+
+    </button>
+
+    <div id="refPopup"
+         class="ref-popup">
+
+        <div class="ref-content">
+
+            <h3>References</h3>
+
+            <p>
+                Property content created for educational purposes.
+            </p>
+
+            <button id="refClose"
+                    class="ref-close">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

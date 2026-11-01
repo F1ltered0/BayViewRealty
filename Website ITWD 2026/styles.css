@@ -1,0 +1,502 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background: #0077cc;
+    color: white;
+    padding: 20px;
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-center {
+    justify-content: center;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+/* Logo */
+
+.logo-img {
+    width: 160px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Navigation */
+
+.header-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav {
+    margin-bottom: 15px;
+}
+
+.nav-btn,
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.nav-btn:hover,
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Search */
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+.search-container input {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Filters */
+
+.filters {
+    margin-top: 10px;
+}
+
+.filter-btn {
+    background: white;
+    color: #0077cc;
+    border: none;
+    padding: 10px 16px;
+    margin: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background: #e8f4ff;
+}
+
+.filter-btn.active {
+    background: #005fa3;
+    color: white;
+}
+
+/* Property Grid */
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.property-card {
+    border: 1px solid #cccccc;
+    background: white;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.property-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.image-placeholder {
+    background: #e5e5e5;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.featured-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.price {
+    color: #0077cc;
+    font-weight: bold;
+}
+
+/* Featured Property */
+
+.featured {
+    border: 3px solid gold;
+}
+
+.featured-badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+
+    background: gold;
+    color: black;
+
+    padding: 6px 12px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+/* Settings Popup */
+
+.settings-popup,
+.uc-popup,
+.ref-popup {
+    display: none;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.settings-content,
+.uc-content,
+.ref-content {
+    background: white;
+    padding: 20px;
+    width: 320px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.settings-content select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.settings-btn,
+.tts-btn,
+.close-settings,
+.contact-btn,
+.uc-close,
+.ref-close {
+    background: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Under Construction */
+
+.uc-img {
+    width: 90px;
+}
+
+/* Product Page */
+
+.product-page {
+    padding: 20px;
+}
+
+.hero-image {
+    margin-bottom: 20px;
+}
+
+.featured-img-large {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-details,
+.agent-section {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.features li {
+    margin: 6px 0;
+}
+
+/* Map */
+
+.map-placeholder {
+    background: #e5e5e5;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.map-pin {
+    font-size: 40px;
+}
+
+/* Agent Section */
+
+.agent-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.agent-photo {
+    width: 120px;
+    height: 120px;
+
+    background: #e5e5e5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Chat Widget */
+
+.chat-bubble {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    background: #0077cc;
+    color: white;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 24px;
+}
+
+.chat-box {
+    display: none;
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 90px;
+
+    width: 280px;
+
+    background: white;
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.chat-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: #0077cc;
+    color: white;
+
+    padding: 10px;
+}
+
+.chat-header button {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-content {
+    padding: 10px;
+}
+
+.bot-msg,
+.user-msg {
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.bot-msg {
+    background: #eeeeee;
+}
+
+.user-msg {
+    background: #cce5ff;
+    text-align: right;
+}
+
+.chat-option {
+    width: 100%;
+    margin-top: 5px;
+
+    background: #0077cc;
+    color: white;
+
+    border: none;
+
+    padding: 8px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+/* References Button */
+
+.ref-btn {
+    position: fixed;
+
+    left: 20px;
+    bottom: 20px;
+
+    background: #0077cc;
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background: #e5e5e5;
+    padding: 20px;
+    text-align: right;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Dark Mode */
+
+.dark-mode {
+    background: #1e1e1e;
+    color: #f2f2f2;
+}
+
+.dark-mode header {
+    background: #111;
+}
+
+.dark-mode .property-card,
+.dark-mode .product-details,
+.dark-mode .agent-section,
+.dark-mode .settings-content,
+.dark-mode .uc-content,
+.dark-mode .ref-content,
+.dark-mode .chat-box {
+    background: #2a2a2a;
+    color: #f2f2f2;
+}
+
+.dark-mode .chat-header {
+    background: #333;
+}
+
+.dark-mode .chat-option,
+.dark-mode .tts-btn,
+.dark-mode .close-settings {
+    background: #444;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 768px) {
+
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-container input {
+        width: 90%;
+    }
+
+    .header-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .agent-info {
+        flex-direction: column;
+    }
+
+    .chat-box {
+        width: 220px;
+        right: 10px;
+    }
+
+}
